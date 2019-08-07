@@ -1,13 +1,13 @@
 import keyboard
-def press(c):
+def press(c):#gets the direction in which the person is moving, and checks if the user wants to change it
     if keyboard.is_pressed('w'):
-        return 'w'
+        return 'u'
     elif keyboard.is_pressed('s'):
-        return 's'
-    elif keyboard.is_pressed('d'):
         return 'd'
+    elif keyboard.is_pressed('d'):
+        return 'r'
     elif keyboard.is_pressed('a'):
-        return 'a'
+        return 'l'
     return c
 def Input(text):
     try: 
@@ -15,10 +15,10 @@ def Input(text):
     except:
         print ("Numbers Only! Try Again")
         return Input(text)
-def Print(brd):
+def Print(brd):#prints a matrix in the form of text 
     text = ""
     for row in brd:
         for unit in row:
             text += unit
         text += "\n"
-    print text
+    print (text)
